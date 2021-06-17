@@ -30,7 +30,7 @@ export default function App() {
 
   function getWeather(locationNB, locationCleveland, locationVegas) {
     return fetch(
-      `${process.env.REACT_APP_API_URL}/weather/?zip=${process.env.REACT_APP_API_URL}&appid=${process.env.REACT_APP_API_KEY}`
+      `${process.env.REACT_APP_API_URL}/weather/?zip=${process.env.REACT_APP_ZIP_CODE_NB}&appid=${process.env.REACT_APP_API_KEY}`
     )
       .then(res => handleResponse(res))
       .then(weather => {
